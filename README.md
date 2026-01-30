@@ -24,6 +24,10 @@ uv tool install https://github.com/proulxdev/label-crop/archive/refs/heads/main.
 ```bash
 uv tool upgrade label-crop
 ```
+### Remove:
+```bash
+uv tool uninstall label-crop
+```
 
 ## Usage
 You should have `label-crop` as a global command. Alternatively, you can run `lbl.py` using `python3` or `uv run`.
