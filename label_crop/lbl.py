@@ -4,18 +4,18 @@ PDF Label Tool
 
 Modes of operation:
   1. Interactive Crop Box Definition:
-       python3 pdf_label_tool.py input.pdf
+       label-crop input.pdf
      • Opens a GUI showing the first page.
      • Click & drag to draw a rectangle. The script computes the bottom‑left and top‑right 
        coordinates (in PDF points) from your drag (converting from the canvas’ top‑left origin).
      • These coordinates are saved to a configuration file (crop_data.cfg) exactly as selected.
   
   2. Cropping Mode:
-       python3 pdf_label_tool.py input.pdf output.pdf
+       label-crop input.pdf output.pdf
      • Reads the saved crop rectangle from crop_data.cfg and crops every page of the input PDF to that exact rectangle.
   
   3. Cropping + Rotation Mode:
-       python3 pdf_label_tool.py input.pdf output.pdf rotation_angle
+       label-crop input.pdf output.pdf rotation_angle
      • Crops as above, then rotates each page by the given angle (in degrees, clockwise).
 
 All coordinates are in PDF points.
@@ -182,11 +182,11 @@ def main():
     else:
         print("Usage:")
         print("  To define crop box interactively:")
-        print("      python3 pdf_label_tool.py input.pdf")
+        print("      label-crop input.pdf")
         print("  To crop using saved crop box:")
-        print("      python3 pdf_label_tool.py input.pdf output.pdf")
+        print("      label-crop input.pdf output.pdf")
         print("  To crop and rotate:")
-        print("      python3 pdf_label_tool.py input.pdf output.pdf rotation_angle")
+        print("      label-crop input.pdf output.pdf rotation_angle")
         sys.exit(1)
 
 if __name__ == '__main__':
