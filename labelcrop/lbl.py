@@ -29,7 +29,7 @@ import tkinter as tk
 import tkinter.font as tkfont
 import math
 from tkinter import filedialog
-import fitz  # PyMuPDF
+import pymupdf
 from PyPDF2 import PdfReader, PdfWriter
 
 CONFIG_FILE = "crop_data.cfg"
@@ -102,7 +102,7 @@ def interactive_crop_selector(input_pdf_path):
     class PDFLabelSelector:
         def __init__(self, pdf_path):
             self.pdf_path = pdf_path
-            self.doc = fitz.open(pdf_path)
+            self.doc = pymupdf.open(pdf_path)
             self.page = self.doc[0]  # use first page
             self.page_height = self.page.rect.height
             self.scale = 0.5  # scale factor for display
@@ -201,7 +201,7 @@ def interactive_crop_selector(input_pdf_path):
             scale_x = canvas_width / page_width
             scale_y = canvas_height / page_height
             self.scale = min(scale_x, scale_y)
-            matrix = fitz.Matrix(self.scale, self.scale)
+            matrix = pymupdf.Matrix(self.scale, self.scale)
             pix = self.page.get_pixmap(matrix=matrix)
             self.tk_img = tk.PhotoImage(data=pix.tobytes("ppm"))
             self.canvas_width = canvas_width
