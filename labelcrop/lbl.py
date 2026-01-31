@@ -28,7 +28,6 @@ import json
 import tkinter as tk
 import tkinter.font as tkfont
 import math
-from tkinter import filedialog
 import pymupdf
 from PyPDF2 import PdfReader, PdfWriter
 
