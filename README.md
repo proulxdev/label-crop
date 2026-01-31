@@ -33,7 +33,6 @@ uv tool uninstall label-crop
 ```
 
 ## Usage
-You should have `label-crop` as a global command. Alternatively, you can run `lbl.py` using `uv run` or `python3`.
 
 ### Select Crop Area:
 ```bash
@@ -55,3 +54,5 @@ Applies the saved crop selection to every page then rotates in degrees clockwise
 
 
 > **Note:** Crop settings are saved to `crop_data.cfg` in your current directory. Cropping requires this file to be present in your current directory.
+
+> **Note:** You should have `label-crop` as a global command. Alternatively, you can run `lbl.py` using `uv run` or `python3`.
