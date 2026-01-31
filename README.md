@@ -21,38 +21,38 @@ A CLI for defining crop regions on PDFs and batch cropping/rotating them. Useful
 
 ### Install:
 ```bash
-uv tool install https://github.com/proulxdev/label-crop/archive/refs/heads/main.zip
+uv tool install https://github.com/proulxdev/LabelCrop/archive/refs/heads/main.zip
 ```
 ### Update:
 ```bash
-uv tool upgrade label-crop
+uv tool upgrade labelcrop
 ```
 ### Remove:
 ```bash
-uv tool uninstall label-crop
+uv tool uninstall labelcrop
 ```
 
 ## Usage
 
 ### Select Crop Area:
 ```bash
-label-crop input.pdf
+labelcrop input.pdf
 ```
 Use the toolbar to choose Freeform, Force Aspect Ratio, or Force Dimensions. Enter any aspect ratio or dimension constraints. Adjust the crop area by dragging the rectangle, its edges, or its corners. Click Done to save the selection and close.
 
 ### Crop:
 ```bash
-label-crop input.pdf output.pdf
+labelcrop input.pdf output.pdf
 ```
 Applies the saved crop selection to every page.
 
 ### Crop & Rotate:
 ```bash
-label-crop input.pdf output.pdf 90
+labelcrop input.pdf output.pdf 90
 ```
 Applies the saved crop selection to every page then rotates in degrees clockwise.
 
 
 > **Note:** Crop settings are saved to `crop_data.cfg` in your current directory. Cropping requires this file to be present in your current directory.
 
-> **Note:** You should have `label-crop` as a global command. Alternatively, you can run `lbl.py` using `uv run` or `python3`.
+> **Note:** You should have `labelcrop` as a global command. Alternatively, you can run `lbl.py` using `uv run` or `python3`.

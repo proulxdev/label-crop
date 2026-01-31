@@ -1,5 +1,5 @@
 [project]
-name = "label-crop"
+name = "LabelCrop"
 version = "0.2.0"
 description = "A CLI for defining crop regions on PDFs and batch cropping/rotating them. Useful for shipping labels or other PDF documents that need consistent formatting."
 readme = "README.md"
@@ -10,4 +10,4 @@ dependencies = [
 ]
 
 [project.scripts]
-label-crop = "label_crop.lbl:main"
+labelcrop = "labelcrop.lbl:main"

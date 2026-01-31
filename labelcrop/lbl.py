@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-PDF Label Tool
+LabelCrop: CLI PDF Crop Tool
 
 Modes of operation:
   1. Interactive Crop Area Selection:
-       label-crop input.pdf
+       labelcrop input.pdf
      • Opens a GUI showing the first page.
          • Shows a default rectangle that you can move by dragging its center and resize by dragging its edges.
          • Choose freeform, forced aspect ratio, or forced dimensions from the toolbar.
@@ -12,11 +12,11 @@ Modes of operation:
      • These coordinates are saved to a configuration file (crop_data.cfg) exactly as selected.
   
   2. Cropping Mode:
-       label-crop input.pdf output.pdf
+       labelcrop input.pdf output.pdf
      • Reads the saved crop rectangle from crop_data.cfg and crops every page of the input PDF to that exact rectangle.
   
   3. Cropping + Rotation Mode:
-       label-crop input.pdf output.pdf angle_clockwise
+       labelcrop input.pdf output.pdf angle_clockwise
      • Crops as above, then rotates each page by the given angle (in degrees, clockwise).
 
 All coordinates are in PDF points.
@@ -708,11 +708,11 @@ def main():
     else:
         print("Usage:")
         print("  To define crop box interactively:")
-        print("      label-crop input.pdf")
+        print("      labelcrop input.pdf")
         print("  To crop using saved crop box:")
-        print("      label-crop input.pdf output.pdf")
+        print("      labelcrop input.pdf output.pdf")
         print("  To crop and rotate:")
-        print("      label-crop input.pdf output.pdf angle_clockwise")
+        print("      labelcrop input.pdf output.pdf angle_clockwise")
         sys.exit(1)
 
 if __name__ == '__main__':
